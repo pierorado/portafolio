@@ -150,3 +150,88 @@ body {
   background-position: center center;
   
 }
+.section{
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-top: 20px;
+}
+.row{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 15px;
+}
+.row--2{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,590px));
+  gap: 20px;
+}
+.photo{
+  height: 195px;
+  background-color: red;
+  border: 2px solid #FBB23F;
+  border-radius: 20px;
+  
+}
+.details{
+  
+  background-color: green;
+}
+.logo{
+  
+  background-color: blue;
+}
+.logo__img {
+  width: 100px;
+  height: 57px;
+  float: right;
+}
+
+.information{
+  background-color: purple;
+}
+.projects{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 49%;
+  height: 640px;
+  background-color: yellow;
+}
+.services{
+  height: 157px;
+  background-color: black;
+}
+.skills{
+  margin-top: 20px;
+  height: 310px;
+  background-color: white;
+}
+footer{
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .row{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .photo{
+    width: 195px;
+  }
+  .logo{
+    width: 100px;
+    height: 57px;
+  }
+  .section{
+    padding-left: 20px;
+    padding-right: 20px;
+   
+  }
+  .projects{
+    position: static;
+    width: 100%;
+  }
+}
