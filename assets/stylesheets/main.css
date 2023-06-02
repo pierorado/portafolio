@@ -1,9 +1,17 @@
 @charset "UTF-8";
 /* Aquí definimos las Custom properties */
+@font-face {
+  font-family: "Reaver";
+  src: local("Reaver"), url("/assets/stylesheets/fonts/Reaver-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Radiance";
+  src: local("Radiance"), url("/assets/stylesheets/fonts/radiance.woff") format("woff");
+}
 :root {
   --negro: #393939;
   /* Tipografía */
-  --tipo-principal: Poppins, sans-serif;
+  --tipo-principal: Radiance, sans-serif;
   --tipo-secundaria: Verdana;
 }
 
@@ -139,8 +147,6 @@ body {
       -ms-hyphens: auto;
           hyphens: auto;
   /* opcional */
-  font-smooth: always;
-  /* opcional */
   -webkit-font-smoothing: antialiased;
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
@@ -166,20 +172,48 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(200px,590px));
   gap: 20px;
 }
-.photo{
+.photo__img{
   height: 195px;
-  background-color: red;
   border: 2px solid #FBB23F;
   border-radius: 20px;
-  
 }
-.details{
-  
-  background-color: green;
+
+.details__h1{
+  font-family: "Reaver",serif;
+  font-size: 45px;
+  color: #e5ded9;
+  line-height: 1.3em;
 }
-.logo{
+.details__h2{
+  font-family: "Radiance","Noto Sans",sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color:  #61b064;
+  line-height: 1.3em;
+  padding-bottom: 9px;
+}
+.details__p{
+  font-size: 20px;
+  color: #ffff;
+  padding-bottom: 18px;
+}
+.details__social{
+  display: flex;
+  gap: 45px;
+}
+.social__img{
+  width: 34px;
+}
+.social__a{
+  border-radius: 50%;
+  box-sizing: border-box;
+  /*0 3px 8px rgb(220 222 227 / 80%)*/
+  box-shadow: 0 3px 8px rgba(251 178 63);
+  transition: .5s;
+}
+.social__a:hover{
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   
-  background-color: blue;
 }
 .logo__img {
   width: 100px;
