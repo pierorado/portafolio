@@ -1,39 +1,24 @@
 @charset "UTF-8";
-/* Aquí definimos las Custom properties */
 @font-face {
   font-family: "Reaver";
   src: local("Reaver"), url("/assets/stylesheets/fonts/Reaver-Bold.woff") format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "Radiance";
   src: local("Radiance"), url("/assets/stylesheets/fonts/radiance.woff") format("woff");
+  font-display: swap;
 }
 :root {
-  --negro: #393939;
-  /* Tipografía */
   --tipo-principal: Radiance, sans-serif;
-  --tipo-secundaria: Verdana;
+  --tipo-secundaria: Reaver, serif;
+  --color-titulo-nombre:#e5ded9;
+  --color-titulo-cargo:#61b064;
+  --color-titulo-lugar:#d9dfe6;
+  --color-subtitle:#6b7785;
+  --color-general:#9FA69C;
+  --color-secundario:#FBB23F;
 }
-
-/* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #ececec;
-  }
-}
-/* Opcional */
-/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
-/* Opcional */
-/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-animation: none !important;
-            animation: none !important;
-    -webkit-transition: none !important;
-    transition: none !important;
-  }
-}
-/* Reseteamos los margin y paddings de todas las etiquetas */
 * {
   margin: 0;
   padding: 0;
@@ -42,71 +27,36 @@
           box-sizing: border-box;
   vertical-align: baseline;
 }
-
-/* Evitamos problemas con las imagenes */
 img, picture, video, iframe, figure {
   max-width: 100%;
   width: 100%;
+  height: auto;
   display: block;
-  /* opcional */
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* opcional */
-  -o-object-position: center center;
-     object-position: center center;
 }
-
-/* Reseteamos los enlaces para funcionar como cajas... */
 a {
   display: block;
   text-decoration: none;
   color: inherit;
   font-size: inherit;
 }
-
-/* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
- 
 }
-
-/* Quitamos los puntos de los <li> */
-li {
-  list-style-type: none;
-}
-
-/* Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
-
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 500;
   font-style: normal;
   text-decoration: none;
-  color: #9FA69C;
+  color: var(--color-general);
 }
-
-/* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   content: none;
 }
-
-/* Configuramos el texto que seleccionamos */
-::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
-::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
-
-/* Nivelamos problemas de tipografías y colocación de formularios */
-form, input, textarea, select, button, label {
+input, label {
   font-family: inherit;
   font-size: inherit;
   -webkit-hyphens: auto;
@@ -115,40 +65,31 @@ form, input, textarea, select, button, label {
   background-color: transparent;
   color: inherit;
   display: block;
-  /* opcional */
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-
-/* Reseteamos las tablas */
 table, tr, td {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-/* Evitamos problemas con los SVG */
 svg {
   width: 100%;
   display: block;
   fill: currentColor;
 }
-
-/* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
   font-size: 100%;
   font-family: var(--tipo-principal);
-  color: var(--negro);
-  /* opcional */
+  color: var(--color-general);
+
   line-height: 1.4em;
-  /* opcional */
+
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-  /* opcional */
   -webkit-font-smoothing: antialiased;
-  /* opcional */
   -moz-osx-font-smoothing: grayscale;
   background-image: url("/assets/image/fondo.webp");
   background-size: cover;
@@ -159,42 +100,43 @@ body {
 .section{
   max-width: 1200px;
   margin: 0px auto;
-  padding-top: 20px;
 }
 .row{
   display: grid;
+  padding-top: 15px;
   grid-template-columns: 1fr 4fr 1fr;
   gap: 15px;
 }
-.row--2{
+.row2{
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px,590px));
-  gap: 20px;
+  grid-template-areas: "infoone infotwo";
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.25rem;
 }
 .photo__img{
   height: 195px;
-  border: 2px solid #FBB23F;
+  border: 2px solid var(--color-secundario);
   border-radius: 20px;
 }
-
 .details__h1{
-  font-family: "Reaver",serif;
-  font-size: 45px;
-  color: #e5ded9;
+  font-family: var(--tipo-secundaria);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: var(--color-titulo-nombre);
   line-height: 1.3em;
 }
 .details__h2{
-  font-family: "Radiance","Noto Sans",sans-serif;
+  font-family: var(--tipo-principal);
+  letter-spacing: 2px;
   font-weight: 700;
-  font-size: 24px;
-  color:  #61b064;
+  font-size: 1.5rem;
+  color:  var(--color-titulo-cargo);
   line-height: 1.3em;
   padding-bottom: 9px;
 }
 .details__p{
-  font-size: 20px;
-  color: #ffff;
+  font-size: 1.3rem;
   padding-bottom: 18px;
 }
 .details__social{
@@ -203,69 +145,258 @@ body {
 }
 .social__img{
   width: 34px;
+  height: 34px;
 }
 .social__a{
   border-radius: 50%;
   box-sizing: border-box;
-  /*0 3px 8px rgb(220 222 227 / 80%)*/
   box-shadow: 0 3px 8px rgba(251 178 63);
   transition: .5s;
 }
 .social__a:hover{
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  
 }
 .logo__img {
-  width: 100px;
+  width: 57px;
   height: 57px;
   float: right;
 }
-
-.information{
-  background-color: purple;
+.tittle{
+  background-color: #131315;
+  padding: 5px 15px;
 }
-.projects{
+.tittle__h4{
+  font-family: var(--tipo-secundaria);
+  color: var(--color-subtitle);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+.information__item{
+  margin-top: 15px;
+  background: rgba(63, 61, 61, 0.37);
+  box-shadow: 4px 4px 16px rgba(0,0,0,.4);
+}
+.services__img{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.services__item{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5px 15px;
+}
+.services__col{
+  margin: 0 auto;
+}
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px 15px;
+}
+.skills__p{
+  color: var(--color-subtitle);
+}
+.skills__img{
+  width:330px ;
+  height:251px;
+}
+.list{
+  list-style-position: inside;
+  width: 100%;
+}
+.skills__list{
+  columns: 2;
+}
+.list__item{
+  font-size: 1rem;
+  line-height: 2.1;
+  color: var(--color-secundario);
+}
+.list__span{
+  font-size: 1rem;
+}
+.information--col1{
+  grid-area: infoone;
+}
+.information--col2{
+  grid-area: infotwo;
   position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 49%;
-  height: 640px;
-  background-color: yellow;
+  height: 650px;
 }
-.services{
-  height: 157px;
-  background-color: black;
+.information__tabs{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
-.skills{
-  margin-top: 20px;
-  height: 310px;
-  background-color: white;
+.information__label{
+  font-family: var(--tipo-secundaria);
+  color: var(--color-subtitle);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 39.7px;
+  cursor: pointer;
+}
+.information--tabcontent{
+  width: 100%;
+  height: 605px;
+  background: rgba(63, 61, 61, 0.37);
+  box-shadow: 4px 4px 16px rgba(0,0,0,.4);
+  order: 1;
+  display: none;
+}
+.information__tabs input[type='radio']:checked + label + .information--tabcontent{
+  display: block;
+}
+.information__tabs input[type='radio']:checked + label{
+  color:var(--color-secundario);
+  border-bottom: 3px solid var(--color-secundario);
+}
+.profile{
+  padding: 15px 15px;
+}
+.profile__tittle{
+  padding: 15px 0px;
+}
+.work__th {
+  font-family: var(--tipo-secundaria);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    width: 25%;
+    text-align: left;
+    padding: 5px 15px;
+}
+.work__tr--tbody:nth-child(odd) {
+  background-color: rgb(39 39 45 / 32%);
+}
+.work__thead {
+  background-color: #131315;
+  color: var(--color-subtitle);
+}
+.work__td {
+  opacity: 0.3;
+  padding: 20px;
+  vertical-align: middle;
+  hyphens: initial;
+}
+.work__tr--tbody:hover .work__a, .work__tr--tbody:focus .work__a {
+  color: var(--color-secundario);
+}
+.work__tr--tbody:hover .work__td, .work__tr--tbody:focus .work__td {
+  opacity: 1;
+  transition: .3s all ease;
+}
+.experience{
+  padding: 15px 15px;
+}
+.experience__item{
+  display: flex;
+  gap: 1.3rem;
+  border-bottom: 1px solid var(--color-general);
+  padding-bottom: 15px;
+  margin-bottom: 15px; 
+}
+.experience__item--one{ 
+  animation: fade-down 0.4s;
+}
+.experience__item--two{
+  animation: fade-down 0.8s;
+}
+.experience__h5{
+  font-family: var(--tipo-secundaria);
+  color: var(--color-subtitle);
+}
+.experience__p {
+  height: 55.22px;
+}
+.experience__span{
+  float: right;
+}
+.experience__img{
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 0px 8px #000;
 }
 footer{
+  padding: 5px;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
-
-@media (max-width: 800px) {
+@keyframes fade-down {
+  0%{
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@media screen and (width <= 767px) {
   .row{
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
   }
+  .row2{
+    grid-template-areas: "infoone" "infotwo";
+    grid-template-columns: 1fr;
+  }
   .photo{
     width: 195px;
   }
   .logo{
-    width: 100px;
+    width: 57px;
     height: 57px;
   }
   .section{
-    padding-left: 20px;
-    padding-right: 20px;
-   
+    max-width: 280px;
   }
-  .projects{
-    position: static;
-    width: 100%;
+  .details__personal {
+    text-align: center;
+  }
+  .information--col2{
+    position: relative;
+    height: auto;
+  }
+  .work{
+    width: 280px;
+  }
+  .skills__img {
+    width: 250px;
+    height: 190px;
+}
+  .experience__p {
+    height: auto;
+}
+.information--tabcontent{
+  overflow-x: auto;
+  height: auto;
+}
+}
+@media screen and (767px <= width <= 1280px){
+  .section{
+    max-width: 740px;
+  }
+  .row{
+    grid-template-columns: 2fr 5fr 1fr;
+  }
+  .row2{
+    grid-template-areas: "infoone" "infotwo";
+    grid-template-columns: 1fr;
+  }
+ .information--col2{
+    position: relative;
+  }
+  .details__h1{
+    font-size: 2.5rem;
+  }
+  .skills{
+    justify-content: space-evenly;
   }
 }

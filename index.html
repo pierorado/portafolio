@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piero Rado</title>
-    <link rel="icon" href="assets/image/favicon.png" type="image/x-icon">
+    <meta name="description" content="I'm Piero Rado a Frontend Developer from Perú. One of my goals is to make services or applications useful to people.">
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/stylesheets/main.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <div class="details" >
                     <div class="details__personal">
                         <h1 class="details__h1">Piero Rado Macavilca</h1>
-                        <h2 class="details__h2">Front End Developer</h2>
+                        <h2 class="details__h2">Frontend Developer</h2>
                         <p class="details__p">Lima - Perú</p>
                     </div>
                     <div class="details__social">
@@ -32,59 +33,171 @@
                             <a class="social__a" href="mailto:piero.rado98@gmail.com" target="_blank"><img class="social__img" alt="Correo" src="assets/image/correo.svg"></a>
                         </div>
                         <div class="social__item">
-                            <a class="social__a" href="assets/upload/mi-cv.docx" download><img class="social__img" alt="Descargar CV" src="assets/image/descarga.svg"></a>
+                            <a class="social__a" href="assets/upload/cv-pierorado.pdf" download><img class="social__img" alt="Descargar CV" src="assets/image/descarga.svg"></a>
                         </div>
+                    
                     </div>
                 </div> 
                 <figure class="logo">
-                    <img class="logo__img" src="assets/image/logo.webp" alt="mi-logo">
+                    <img class="logo__img" src="assets/image/logo-large.webp" alt="mi-logo">
                 </figure>
             </div>
         </section>
         <section class="section">
-            <div class="row--2">
-                <div class="information" >
-                    <div class="services">
+            <div class="row2">
+                <div class="information information--col1" >
+                    <div class="information__item">
                         <div class="tittle">
-                            <h4 class="tittle__h4">Servicios</h4>
+                            <h4 class="tittle__h4">SERVICIOS</h4>
                         </div>
-                        <div class="service">
-                            <div class="service___col">
-                                <img class="service__img" src="" alt=""/>
-                                <p class="service__p">Desarrollo Web</p>
+                        <div class="services__item">
+                            <div class="services__col">
+                                <img class="services__img" src="assets/image/web.svg" alt="Desarrollo Web">
+                                <p class="services__p">Desarrollo Web</p>
                             </div>
-                            <div class="service__col">
-                                <img class="service__img" src="" alt=""/>
-                                <p class="service__p">Auditoria para WP</p>
+                            <div class="services__col">
+                                <img class="services__img" src="assets/image/auditoria.svg" alt="Auditoría para WordPress">
+                                <p class="services__p">Auditoría para WP</p>
                             </div>
-                            <div class="service__col">
-                                <img class="service__img" src="" alt=""/>
-                                <p class="service__p">Mantenimiento para WP</p>
+                            <div class="services__col">
+                                <img class="services__img" src="assets/image/mantenimiento.svg" alt="Mantenimiento para WordPress">
+                                <p class="services__p">Mantenimiento para WP</p>
                             </div>
                         </div>
                     </div>
-                    <div class="skills">
+                    <div class="information__item">
                         <div class="tittle">
                             <h4 class="tittle__h4">HABILIDADES</h4>
                         </div>
-                        <div class="soft">
-                            <p class="soft__p">BLANDAS</p>
-                        </div>
-                        <div class="technical">
-                            <p class="technical__p">TECNINAS</p>
+                        <div class="skills">
+                            <div class="skills__element skills__element--soft">
+                                <p class="skills__p">BLANDAS</p>
+                                <img class="skills__img" src="assets/image/pentagono-medium.webp"  alt="Habilidades blandas">
+                            </div>
+                            <div class="skills__element skills__element--technical">
+                                <p class="skills__p">TÉCNICAS</p>
+                                <ul class="skills__list list">
+                                    <li class="list__item"><span class="list__span">Boostrap</span></li>
+                                    <li class="list__item"><span class="list__span">Java</span></li>
+                                    <li class="list__item"><span class="list__span">JavaScript</span></li>
+                                    <li class="list__item"><span class="list__span">MySQL</span></li>
+                                    <li class="list__item"><span class="list__span">Laravel</span></li>
+                                    <li class="list__item"><span class="list__span">Phyton</span></li>
+                                    <li class="list__item"><span class="list__span">PHP</span></li>
+                                    <li class="list__item"><span class="list__span">WordPress</span></li>
+                                </ul>
+                        
 
+                            </div>
                         </div>
-
                     </div>
                 </div>
-                <div class="projects">
+                <div class="information information--col2">
+                <div class="information__tabs">
+                    <input type="radio" id="tabprofile" name="information__tabs" checked="checked">
+                    <label for="tabprofile" class="information__label">Perfil</label>
+                    <div class="profile information--tabcontent">
+                        <div class="profile__description profile--content">
+                        <p>Frontend Developer con sólidos conocimientos en PHP, CSS y javaScript, manejo del framewok laravel, control de versiones con GIT, prototipo con el programa de diseño Figma, poseo la capacidad de construir páginas web con WordPress, conocimientos básicos en Java y Phyton.<br>Una de mis metas, es hacer servicios o aplicaciones útiles para las personas, además de esto, disfruto mucho el proceso creativo. Me considero una persona perseverante con fuertes habilidades para identificar y resolver problemas.</p>
+                        </div>
+                        <div class="profile__education">
+                            <div class="profile__tittle">
+                                <h4 class="tittle__h4">EDUCACIÓN</h4>
+                            </div>
+                            <ul class="list">
+                                <li class="list__item"><span class="list__span">Diseño de software e Integración de Sistemas (TECSUP)</span></li>
+                            </ul>
+                        </div>
+                        <div class="profile__curses">
+                            <div class="profile__tittle">
+                                <h4 class="tittle__h4">CURSOS Y CAPACITACIÓNES</h4>
+                            </div>
+                            <ul class="list">
+                                <li class="list__item"><span class="list__span">Introducción al Desarrollo Web: HTML y CSS (Google Actívate)</span></li>
+                                <li class="list__item"><span class="list__span">Scrum Fundamentals Certified (SCRUMstudy)</span></li>
+                                <li class="list__item"><span class="list__span">Scrum Foundations Professional Certificate (CertiProf)</span></li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <input type="radio" id="tabwork" name="information__tabs">
+                    <label for="tabwork" class="information__label">Trabajos recientes</label>
+                    <div class="work information--tabcontent">
+                        <table class="work__table">
+                            <thead class="work__thead">
+                              <tr class="work__tr">
+                                <th class="work__th">NOMBRE</th>
+                                <th class="work__th">SERVICIOS</th>
+                                <th class="work__th">TECNOLOGÍAS</th>
+                              </tr>
+                            </thead>
+                            <tbody class="work__tbody">
+                              <tr class="work__tr work__tr--tbody">
+                                <td class="work__td"><a class="work__a" href="https://efirstinternational.com/" target="_blank">EFI</a></td>
+                                <td class="work__td">Desarrollo Web</td>
+                                <td class="work__td">Elemento + LearnDash+ SEO</td>
+                              </tr>
+                              <tr class="work__tr work__tr--tbody">
+                                <td class="work__td"><a class="work__a" href="https://vailinmobiliaria.com/" target="_blank">Vail Inmobiliaria</a></td>
+                                <td class="work__td">Desarrollo Web</td>
+                                <td class="work__td">WordPress + Divi + SEO</td>
+                              </tr >
+                              <tr class="work__tr work__tr--tbody">
+                                <td class="work__td"><a class="work__a" href="https://www.rodaliss.com/" target="_blank">Rodalis</a></td>
+                                <td class="work__td">Desarrollo Web</td>
+                                <td class="work__td">WordPress + Divi + SEO</td>
+                              </tr>
+                              <tr class="work__tr work__tr--tbody">
+                                <td class="work__td"><a class="work__a" href="https://segres.com/" target="_blank">Segres Systec</a></td>
+                                <td class="work__td">Desarrollo Web</td>
+                                <td class="work__td">WordPress + Divi + PHP</td>
+                              </tr>
+                              <tr class="work__tr work__tr--tbody">
+                                <td class="work__td"><a class="work__a" href="https://www.cirtextiles.com/" target="_blank">Cirtextiles</a></td>
+                                <td class="work__td">Desarrollo Web</td>
+                                <td class="work__td">WordPress + Divi + SEO</td>
+                              </tr>
+                              <tr class="work__tr work__tr--tbody">
+                                <td class="work__td"><a class="work__a" href="https://jginverperusac.com/" target="_blank">J&G Inversiones</a></td>
+                                <td class="work__td">Desarrollo Web</td>
+                                <td class="work__td">WordPress + Divi + SEO</td>
+                              </tr>
+                              <tr class="work__tr work__tr--tbody">
+                                <td class="work__td"><a class="work__a" href="https://briane.pe/" target="_blank">Transportes Briane</a></td>
+                                <td class="work__td">Desarrollo Web</td>
+                                <td class="work__td">PHP + HTML + CSS + JavaScript + Mysql</td>
+                              </tr>
+                            </tbody>
+                          </table>     
+                    </div>
+
+                    <input type="radio" id="tabexperience" name="information__tabs">
+                    <label for="tabexperience" class="information__label">Experiencia</label>
+                    <div class="experience information--tabcontent">
+                        <div class="experience__item experience__item--one">
+                            <img class="experience__img" src="assets/image/atp.png" alt="Academia de Tecnología Peruana">
+                            <div class="experience__description ">
+                                <h5 class="experience__h5">Academia de Tecnología Peruana</h5>
+                                <p class="experience__p">Encargado del desarrollo de páginas web tipo WooCommerce, educativo, catálogo, etc.</p>
+                                <span class="experience__span">sept. 2020 - actualidad</span>
+                            </div>  
+                        </div>
+                        <div class="experience__item experience__item--two">
+                            <img class="experience__img" src="assets/image/briane.png" alt="Transportes Briane">
+                            <div class="experience__description ">
+                                <h5 class="experience__h5">Transportes Briane</h5>
+                                <p class="experience__p">Desarrollo de una página web tipo corporativa para la empresa de Transporte Briane.</p>
+                                <span class="experience__span">6 meses</span>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <p class="footer__p">Desarrollado por Piero Rado inspirado en el juego Dota 2</p>
+        <p class="footer__p">Copyright 2023 por Piero Rado</p>
     </footer>
 </body>
 
