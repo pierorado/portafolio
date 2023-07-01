@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Reaver";
-  src: local("Reaver"), url("/assets/stylesheets/fonts/Reaver-Bold.woff") format("woff");
+  src: local("Reaver"), url("../stylesheets/fonts/Reaver-Bold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Radiance";
-  src: local("Radiance"), url("/assets/stylesheets/fonts/radiance.woff") format("woff");
+  src: local("Radiance"), url("../stylesheets/fonts/radiance.woff") format("woff");
   font-display: swap;
 }
 :root {
@@ -91,7 +91,7 @@ body {
           hyphens: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/assets/image/fondo.webp");
+  background-image: url("../image/fondo.webp");
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center center;
