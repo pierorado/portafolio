@@ -83,19 +83,13 @@ body {
   font-size: 100%;
   font-family: var(--tipo-principal);
   color: var(--color-general);
-
   line-height: 1.4em;
-
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("../image/fondo.webp");
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center center;
-  
+  background-color: #090f29; 
 }
 .section{
   max-width: 1200px;
@@ -236,10 +230,10 @@ body {
 .information__label{
   font-family: var(--tipo-secundaria);
   color: var(--color-subtitle);
-  font-size: 0.8rem;
+  font-size: 12.8px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 10px 39.7px;
+  padding: 10px 27.7px;
   cursor: pointer;
 }
 .information--tabcontent{
