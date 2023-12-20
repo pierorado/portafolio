@@ -89,7 +89,7 @@ body {
           hyphens: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #090f29;
+  background-color: #090f29; 
 }
 .section{
   max-width: 1200px;
