@@ -144,11 +144,12 @@ body {
 .social__a{
   border-radius: 50%;
   box-sizing: border-box;
-  box-shadow: 0 3px 8px rgba(251 178 63);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   transition: .5s;
 }
 .social__a:hover{
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  
+  box-shadow: 0 3px 8px rgba(251 178 63);
 }
 .logo__img {
   width: 57px;
@@ -183,6 +184,9 @@ body {
 }
 .services__col{
   margin: 0 auto;
+}
+.services__p{
+  text-align: center;
 }
 .skills{
   display: flex;
@@ -220,7 +224,7 @@ body {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  height: 650px;
+  height: 635px;
 }
 .information__tabs{
   display: flex;
@@ -229,16 +233,19 @@ body {
 }
 .information__label{
   font-family: var(--tipo-secundaria);
+  background-color: #131315;
   color: var(--color-subtitle);
   font-size: 12.8px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 10px 27.7px;
+  padding: 10px 0px;
   cursor: pointer;
+  width: 196px;
+  text-align: center;
 }
 .information--tabcontent{
   width: 100%;
-  height: 605px;
+  height: 590px;
   background: rgba(63, 61, 61, 0.37);
   box-shadow: 4px 4px 16px rgba(0,0,0,.4);
   order: 1;
@@ -248,7 +255,8 @@ body {
   display: block;
 }
 .information__tabs input[type='radio']:checked + label{
-  color:var(--color-secundario);
+  text-shadow: 0 0 15px var(--color-general), 0 0 2px var(--color-secundario);
+  color: var(--color-general);
   border-bottom: 3px solid var(--color-secundario);
 }
 .profile{
@@ -263,27 +271,42 @@ body {
     letter-spacing: 2px;
     width: 25%;
     text-align: left;
-    padding: 5px 15px;
+    padding: 10px;
 }
+
 .work__tr--tbody:nth-child(odd) {
   background-color: rgb(39 39 45 / 32%);
 }
 .work__thead {
-  background-color: #131315;
   color: var(--color-subtitle);
 }
 .work__td {
-  opacity: 0.3;
-  padding: 20px;
+  padding: 10px;
   vertical-align: middle;
   hyphens: initial;
 }
-.work__tr--tbody:hover .work__a, .work__tr--tbody:focus .work__a {
-  color: var(--color-secundario);
+.work__td--large{
+  width: 29%;
 }
-.work__tr--tbody:hover .work__td, .work__tr--tbody:focus .work__td {
-  opacity: 1;
-  transition: .3s all ease;
+.work__td--button{
+  width: 20%;
+  padding: 0 20px;
+}
+.work__a--view{
+  background-color: var(--color-secundario);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 5px 0px;
+}
+.work__a--view:hover{
+  transition: .5s;
+  box-shadow: 0 3px 8px rgba(251 178 63);
+}
+
+.work__img{
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
 }
 .experience{
   padding: 15px 15px;
@@ -355,9 +378,13 @@ footer{
     text-align: center;
   }
   .information--col2{
+    margin-top: 20px;
     position: relative;
     height: auto;
   }
+  .information__label {
+    width: 100%;
+}
   .work{
     width: 280px;
   }
