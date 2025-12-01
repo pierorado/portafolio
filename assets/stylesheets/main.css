@@ -344,6 +344,39 @@ footer{
   text-align: center;
   font-size: 0.9rem;
 }
+
+.paginacion-container {
+  
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paginacion-container button {
+  color: var(--color-subtitle);
+    padding: 8px 16px;
+    background-color: #131315;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.paginacion-container button:hover {
+    background-color: var(--color-secundario);
+}
+
+.paginacion-container button.activo {
+    background-color: var(--color-secundario); /* Color de fondo para la página actual */
+    color: var(--color-subtitle);
+}
+
+.paginacion-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 @keyframes fade-down {
   0%{
     opacity: 0;
